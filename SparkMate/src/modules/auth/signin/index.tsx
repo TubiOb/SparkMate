@@ -1,6 +1,9 @@
 import { Box, Text, Flex,  } from '@chakra-ui/react'
 import { Defaultbutton, Input } from '../../../components'
 import { useNavigate } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ChakraLink,  } from '@chakra-ui/react';
+import '../../../index.css';
 
 
 const SignIn = () => {
@@ -51,7 +54,12 @@ const SignIn = () => {
         </Defaultbutton>
 
 
-        <Text as='p' fontSize={['15px', '18px']} textAlign='center' mt='20px'>Don't have an account? <Text as='span' textDecorationLine='underline' color='purple.400' fontWeight='500'>Sign Up</Text></Text>
+        <Box mt='80px' fontSize={['14px']}>
+          <ChakraLink as={ReactRouterLink} to="/auth/signup" _hover={{textDecoration: "none"}}>
+            <Text>Don't have an account? <Text as='span'_hover={{textDecoration: "underline"}} fontWeight='700'>Sign Up</Text></Text>
+          </ChakraLink>
+        </Box>
+        
       </Box>
       
       

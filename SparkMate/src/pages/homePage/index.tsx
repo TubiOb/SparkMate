@@ -2,6 +2,7 @@ import { Box, Image, Text } from '@chakra-ui/react';
 import { Defaultbutton } from '../../components';
 import { Logo } from '../../assets';
 import { useNavigate } from 'react-router-dom';
+import '../../index.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
