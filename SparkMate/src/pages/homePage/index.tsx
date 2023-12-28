@@ -28,7 +28,7 @@ const HomePage = () => {
           <Defaultbutton bg="white" width={['190px', '180px', '210px', '250px']} color="black" shadow="base" fontSize={['18px', '22px']} 
           onClick={() => handleNavigation('signin')}>{'Login'}</Defaultbutton>
 
-          <Defaultbutton bg="purple.300" width={['190px', '180px', '210px', '250px']} color="white" shadow="base" fontSize={['18px', '22px']} 
+          <Defaultbutton bg="purple.400" width={['190px', '180px', '210px', '250px']} color="white" shadow="base" fontSize={['18px', '22px']} 
           onClick={() => handleNavigation('signup')}>{'Sign Up'}</Defaultbutton>
         </Box>
       </Box>
