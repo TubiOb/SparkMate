@@ -1,57 +1,68 @@
-import { Box , Flex, Text} from '@chakra-ui/react'
-import { Input } from '../../../components'
-import "../../../index.css"
-
-
+import { Box, Flex, Text } from '@chakra-ui/react';
+import { Defaultbutton, Input } from '../../../components';
+import '../../../index.css';
 
 const SignUp = () => {
   return (
-    <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
+    <Box display="flex" textAlign='center' flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
+      <Box w={["90%", "80%", "70%"]} mx="auto">
+        <Box
+          display="flex"
+          flexDir={['column', 'row']}
+          mb="40px"
+          alignContent="center"
+          justifyContent="center"
+          textAlign="center"
+          gap={['10px', '5px']}
+        >
+          <Text as="h1" className="subheading" flexWrap="wrap" fontSize={['25px', '30px']} textAlign="center" fontWeight="700">
+            Create Account
+          </Text>
+          <Text as="span" fontSize={['25px', '30px']} textAlign="center" fontWeight="400">
+            to get started now!
+          </Text>
+        </Box>
 
-      <Box w={["90%", "80%", "70%"]} mx='auto'>
-        <Text as='h1' className='subheading' fontSize={['15px', '18px', '22px']}
-         fontWeight='700'>Create Account 
-         <Text as='span' fontWeight='400'> to get started </Text></Text>
+        <Flex direction="column" mb="40px" gap={["15px", "33px"]} >
+          <Input
+            color={'blue.100'}
+            label="Email"
+            name="email"
+            errorColor={"red.100"}
+            shadow="sm"
+           
+          />
+          <Input
+            color="blue.100"
+            label="Enter Password"
+            name="password"
+            errorColor={"red.100"}
+            type={'password'}
+            shadow="sm"
+          />
+          <Input
+            color="blue.100"
+            label="Confirm Password"
+            name="password"
+            errorColor={"red.100"}
+            type={'password'}
+            shadow="sm"
+          />
+        </Flex>
 
-
-         <Flex direction="column" gap={["15px", "33px"]} mb="20px">
-      <Input
-  color={'blue.100'}
-  label="Email"
-  name="email"
-  errorColor={"red.100"}
-  shadow='sm'
-  
-/>
-
-                      <Input
-                      color='blue.100'
-                      
-                        label="Enter Password"
-                        name="password"
-                        errorColor={"red.100"}
-                        
-                        type={'password'}
-                        shadow='sm'
-                      />
-
-                      <Input
-                      color='blue.100'
-                      
-                        label="Confirm Password"
-                        name="password"
-                        errorColor={"red.100"}
-                        
-                        type={'password'}
-                        shadow='sm'
-                      />
-                    </Flex>
-     
+        <Defaultbutton
+          bg="white"
+          width={['80%', '80%', '80%', '90%']}
+          color="black"
+          shadow="base"
+          mx="auto"
+          fontSize={['15px', '20px']}
+        >
+          {'Sign Up'}
+        </Defaultbutton>
       </Box>
-
-     
     </Box>
-  )
-}
+  );
+};
 
-export default SignUp
+export default SignUp;

@@ -16,7 +16,7 @@ const Input = (props: InputProps) => {
   };
 
   return (
-    <Flex direction="column" p='2px' py='5px' gap="4px" w={width} overflow='hidden'>
+    <Flex direction="column" p='5px' gap="4px" w={width} overflow='hidden'>
       <Text
         as="label"
         htmlFor={name}
