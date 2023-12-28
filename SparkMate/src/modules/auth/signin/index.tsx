@@ -12,10 +12,16 @@ const SignIn = () => {
 
   return (
     <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
-      <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" textAlign='center' w={['95%', '90%', '80%', '35%']} m="auto" gap="40px">
-        <Text as="h1" className='subheading' fontSize={['25px', '30px']} textAlign="center" fontWeight='700'>
-          Welcome, <Text as="span" fontSize={['25px', '30px']} textAlign="center" fontWeight='400'>Glad to see you!</Text>
-        </Text>
+      <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" textAlign='center' w={['90%', '90%', '80%', '35%']} m="auto" gap="40px">
+        <Box display='flex' flexDir={['column', 'row']} alignContent="center" justifyContent="center" textAlign='center' gap={['10px', '5px']}>
+          <Text as="h1" className='subheading' flexWrap='wrap' fontSize={['25px', '30px']} textAlign="center" fontWeight='700'>
+            Welcome,  
+          </Text>
+          <Text as="span" fontSize={['25px', '30px']} textAlign="center" fontWeight='400'>
+            Glad to see you!
+          </Text>
+        </Box>
+        
 
 
         <Flex direction="column" gap={["15px", "33px"]}>
@@ -33,7 +39,7 @@ const SignIn = () => {
             type={'password'}
           />
 
-          <Text as='p' textAlign='right'>Forgot password?</Text>
+          <Text as='p' textAlign='right' fontSize={['15px', '18px']}>Forgot password?</Text>
         </Flex>
 
         
