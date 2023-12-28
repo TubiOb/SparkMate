@@ -21,5 +21,6 @@ body {
 }
 
 .gradientStyle {
-    background: 'linear-gradient(to bottom, white, purple.200, purple.500)'
+    background: linear-gradient(to bottom, white, #D5A9FF);
 }
+

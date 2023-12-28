@@ -1,11 +1,12 @@
 import { Box , Flex, Text} from '@chakra-ui/react'
 import { Input } from '../../../components'
+import "../../../index.css"
 
 
 
 const SignUp = () => {
   return (
-    <Box>
+    <Box className='gradientStyle'>
 
       <Box>
         <Text as='h1' className='subheading' fontSize={['15px', '18px', '22px']}
@@ -14,13 +15,15 @@ const SignUp = () => {
       </Box>
 
       <Flex direction="column" gap={["15px", "33px"]} mb="20px">
-                      <Input
-                       
-                        color={'blue.100'}
-                        label="Email"
-                        name="email"
-                        errorColor={"red.100"}
-                      />
+      <Input
+  color={'blue.100'}
+  label="Email"
+  name="email"
+  errorColor={"red.100"}
+  bgColor="rgba(255, 255, 255, 0.2)" // Adjust transparency as needed (0.2 is 20% opaque)
+  // Adjust the shadow according to your preference
+/>
+
                       <Input
                       color='blue.100'
                       
