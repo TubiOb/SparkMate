@@ -1,5 +1,7 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { Defaultbutton, Input } from '../../../components';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ChakraLink,  } from '@chakra-ui/react';
 import '../../../index.css';
 
 const SignUp = () => {
@@ -60,6 +62,11 @@ const SignUp = () => {
         >
           {'Sign Up'}
         </Defaultbutton>
+
+     <Box mt='80px' fontSize={['14px']}>   <ChakraLink as={ReactRouterLink} to="/auth/signin" _hover={{textDecoration: "none"}}>
+        <Text>Already have an acount? <Text as='span'_hover={{textDecoration: "underline"}} fontWeight='700'>Login Now</Text></Text>
+                    </ChakraLink></Box>
+       
       </Box>
     </Box>
   );
