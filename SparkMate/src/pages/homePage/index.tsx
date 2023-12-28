@@ -1,10 +1,12 @@
 import React from 'react'
+import { Defaultbutton } from '../../components'
+import { Box } from '@chakra-ui/react'
 
 const HomePage = () => {
   return (
-    <div>
-      HomePage
-    </div>
+    <Box>
+      <Defaultbutton></Defaultbutton>
+    </Box>
   )
 }
 
