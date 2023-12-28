@@ -1,1 +1,1 @@
-// export { default as QrealaWhite } from "./images/qreala-white.png";
+export { default as Logo } from "./images/mood-love-inspiration-tender.png";

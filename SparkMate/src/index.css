@@ -11,3 +11,15 @@ body {
 .subheading {
     font-family: 'PT Serif';
 }
+
+.button {
+    font-family: 'Manrope';
+}
+
+.backgroundColor {
+    background: linear-gradient(to right, white, blue.200, purple.600);
+}
+
+.gradientStyle {
+    background: 'linear-gradient(to bottom, white, purple.200, purple.500)'
+}
