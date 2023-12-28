@@ -1,8 +1,15 @@
 import { Box, Image, Text } from '@chakra-ui/react';
 import { Defaultbutton } from '../../components';
 import { Logo } from '../../assets';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (route : string) => {
+    navigate(`/auth/${route}`);
+  };
+
   const gradientStyle = {
     background: 'linear-gradient(to bottom, white, #D5A9FF)',
   };
@@ -18,8 +25,11 @@ const HomePage = () => {
         </Box>
 
         <Box display="flex" flexWrap="wrap" gap={['24px', '30px']} alignContent="center" justifyContent="center">
-          <Defaultbutton bg="white" width={['190px', '180px', '210px', '250px']} color="black" shadow="base" fontSize={['18px', '22px']}>{'Login'}</Defaultbutton>
-          <Defaultbutton bg="purple.300" width={['190px', '180px', '210px', '250px']} color="white" shadow="base" fontSize={['18px', '22px']}>{'Sign Up'}</Defaultbutton>
+          <Defaultbutton bg="white" width={['190px', '180px', '210px', '250px']} color="black" shadow="base" fontSize={['18px', '22px']} 
+          onClick={() => handleNavigation('signin')}>{'Login'}</Defaultbutton>
+
+          <Defaultbutton bg="purple.300" width={['190px', '180px', '210px', '250px']} color="white" shadow="base" fontSize={['18px', '22px']} 
+          onClick={() => handleNavigation('signup')}>{'Sign Up'}</Defaultbutton>
         </Box>
       </Box>
     </Box>
