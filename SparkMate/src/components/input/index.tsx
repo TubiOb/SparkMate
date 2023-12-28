@@ -5,7 +5,7 @@ import { InputProps } from "../../interface";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 
 const Input = (props: InputProps) => {
-  const { label, color, name, value, error, onChange, onBlur, type, isDisabled, width, fontWeight, errorColor,fontSize } = props;
+  const { label, color, name, value, error, onChange, onBlur, type, isDisabled, width, fontWeight, errorColor,fontSize,bgColor } = props;
   
   const isPassword = type === 'password'; 
 
@@ -16,7 +16,7 @@ const Input = (props: InputProps) => {
   };
 
   return (
-    <Flex direction="column" p='2px' gap="4px" w={width} overflow='hidden'>
+    <Flex direction="column" p='2px' gap="4px" w={width} overflow='hidden' bg='transparent'>
       <Text
         as="label"
         htmlFor={name}
@@ -34,7 +34,7 @@ const Input = (props: InputProps) => {
           onChange={onChange}
           color={'black.100'}
           onBlur={onBlur}
-          bgColor="grey.100"
+          bgColor={bgColor}
           fontSize={fontSize}
           borderRadius="10px"
           h="50px"
