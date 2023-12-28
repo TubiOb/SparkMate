@@ -1,11 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BoxProps, ResponsiveValue ,ButtonProps as CBProps,} from "@chakra-ui/react";
 
-export interface DefaultbuttonProps {
+export interface DefaultbuttonProps extends CBProps {
     width: string [];
     bg: string;
     color: string;
     shadow?: string;
+    children: string;
+    borderWidth?: string | number;
+    borderColor?: string;
+    fontSize?: string [];
 }
 
 
