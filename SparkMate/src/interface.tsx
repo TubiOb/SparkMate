@@ -28,6 +28,7 @@ export interface InputProps {
     fontWeight?: string;
     errorColor?: string;
     fontSize?: string[];
+    bgColor?: string;
 }
 
 export interface HeroButtonProps extends CBProps {
