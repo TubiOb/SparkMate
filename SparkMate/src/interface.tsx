@@ -11,11 +11,12 @@ export interface DefaultbuttonProps extends CBProps {
     borderWidth?: string | number;
     borderColor?: string;
     fontSize?: string [];
+    className?: string;
 }
 
 
 export interface InputProps {
-  label: string
+    label: string
     name: string;
     value: string;
     color: string | undefined;

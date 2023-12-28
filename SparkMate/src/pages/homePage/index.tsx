@@ -15,7 +15,7 @@ const HomePage = () => {
   };
 
   return (
-    <Box style={gradientStyle} display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
+    <Box bg='white' display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
       <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" w={['95%', '90%', '80%', '75%']} m="auto" gap="40px">
         <Box w={['180px', '220px', '280px']} mx="auto">
           <Image src={Logo} alt="SparkMate" />
@@ -28,7 +28,7 @@ const HomePage = () => {
           <Defaultbutton bg="white" width={['190px', '180px', '210px', '250px']} color="black" shadow="base" fontSize={['18px', '22px']} 
           onClick={() => handleNavigation('signin')}>{'Login'}</Defaultbutton>
 
-          <Defaultbutton bg="purple.400" width={['190px', '180px', '210px', '250px']} color="white" shadow="base" fontSize={['18px', '22px']} 
+          <Defaultbutton bg='linear-gradient(to right, #674CCD, #D5A9FF)' width={['190px', '180px', '210px', '250px']} color="white" shadow="base" fontSize={['18px', '22px']} 
           onClick={() => handleNavigation('signup')}>{'Sign Up'}</Defaultbutton>
         </Box>
       </Box>
