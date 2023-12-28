@@ -6,9 +6,9 @@ import "../../../index.css"
 
 const SignUp = () => {
   return (
-    <Box display='flex' justifyContent='center' alignContent='center' minH='100vh'>
+    <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
 
-      <Box w={["90%", "80%", "70%"]} >
+      <Box w={["90%", "80%", "70%"]} mx='auto'>
         <Text as='h1' className='subheading' fontSize={['15px', '18px', '22px']}
          fontWeight='700'>Create Account 
          <Text as='span' fontWeight='400'> to get started </Text></Text>
