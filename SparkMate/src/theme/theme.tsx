@@ -27,13 +27,13 @@ const theme = extendTheme({
       200: "#F45C43",
     },
     purple: {
-      100: "#674CCD",
-      200: "#D5A9FF",
-      300: "#FBF8FF"
+      100: "#e0c3fc",
+      200: "#FBF8FF",
+      300: "#D5A9FF",
+      400: "#674CCD",
+      500: "#3c096c",
+      600: "#240046",
     },
-  },
-  fonts: {
-    body: `'ID Grotesk Trial', sans-serif `,
   },
 });
 export default theme;
