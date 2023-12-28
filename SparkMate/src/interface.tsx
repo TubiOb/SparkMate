@@ -30,6 +30,9 @@ export interface InputProps {
     errorColor?: string;
     fontSize?: string[];
     bgColor?: string;
+    borderWidth?: string | number;
+    borderColor?: string;
+    shadow?: string;
 }
 
 export interface HeroButtonProps extends CBProps {
