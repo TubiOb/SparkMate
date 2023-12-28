@@ -10,9 +10,9 @@ const HomePage = () => {
   return (
     <Box style={gradientStyle} display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
       <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" w={['95%', '90%', '80%', '75%']} m="auto" gap="40px">
-        <Box w={['120px', '150px', '250px']} mx="auto">
+        <Box w={['180px', '220px', '280px']} mx="auto">
           <Image src={Logo} alt="SparkMate" />
-          <Text as="h1" className="logo" fontSize={['20px', '40px']} textAlign="center">
+          <Text as="h1" className="logo" fontSize={['30px', '40px']} textAlign="center">
             SparkMate
           </Text>
         </Box>

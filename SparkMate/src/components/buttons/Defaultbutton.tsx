@@ -6,7 +6,7 @@ const Defaultbutton = ( props: DefaultbuttonProps ) => {
 
   return (
     <Box>
-        <ChakraButton _hover={{opacity: 0.7,}} bg={bg} color={color} shadow={shadow} width={width} onClick={onClick} type={type} isLoading={isLoading} loadingText={loadingText} borderWidth={borderWidth} borderColor={borderColor} fontSize={fontSize}>
+        <ChakraButton _hover={{opacity: 0.7,}} bg={bg} color={color} h={['40px', '45px', '50px']} shadow={shadow} width={width} onClick={onClick} type={type} isLoading={isLoading} loadingText={loadingText} borderWidth={borderWidth} borderColor={borderColor} fontSize={fontSize}>
             {children}
         </ChakraButton>
     </Box>
