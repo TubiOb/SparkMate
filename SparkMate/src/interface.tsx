@@ -3,6 +3,9 @@ import { BoxProps, ResponsiveValue ,ButtonProps as CBProps,} from "@chakra-ui/re
 
 export interface DefaultbuttonProps {
     width: string [];
+    bg: string;
+    color: string;
+    shadow?: string;
 }
 
 
