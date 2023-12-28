@@ -7,6 +7,7 @@ export interface DefaultbuttonProps extends CBProps {
     color: string;
     shadow?: string;
     children: string;
+    onClick: React.MouseEventHandler<HTMLButtonElement> | (() => void) | undefined;
     borderWidth?: string | number;
     borderColor?: string;
     fontSize?: string [];
