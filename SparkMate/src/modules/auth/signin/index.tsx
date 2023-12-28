@@ -12,13 +12,7 @@ const SignIn = () => {
 
   return (
     <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">
-<<<<<<< HEAD
       <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" textAlign='center' w={['90%', '90%', '80%', '40%']} m="auto" gap="40px">
-=======
-
-      <Box display="flex" flexDir="column" alignContent="center" justifyContent="center" textAlign='center' w={['90%', '90%', '80%', '35%']} m="auto" >
-
->>>>>>> 0974eee246a4c5b55f36a7e223536affa5ea6887
         <Box display='flex' flexDir={['column', 'row']} alignContent="center" justifyContent="center" textAlign='center' gap={['10px', '5px']}>
           <Text as="h1" className='subheading' flexWrap='wrap' fontSize={['25px', '30px']} textAlign="center" fontWeight='700'>
             Welcome,  
