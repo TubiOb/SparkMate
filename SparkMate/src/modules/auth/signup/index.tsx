@@ -60,7 +60,7 @@ const SignUp = () => {
 
       toast({
         title: 'Signup Successful',
-        description: 'Welcome to Deife\'s Journal!',
+        description: 'Welcome to SparkMate !',
         status: 'success',
         duration: 2000,
         isClosable: true,
@@ -68,7 +68,7 @@ const SignUp = () => {
         variant: 'top-accent',
       });
       setIsPending(false);
-      navigate("/dashboard"); 
+      navigate("/"); 
       setSubmitting(false);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error:any) {
