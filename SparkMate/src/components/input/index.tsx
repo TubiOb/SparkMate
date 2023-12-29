@@ -5,10 +5,10 @@ import { InputProps } from "../../interface";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 
 const Input = (props: InputProps) => {
-  const { label, color, name, value, error, onChange, onBlur, type, isDisabled, width, fontWeight, errorColor,fontSize,shadow} = props;
+  const { label, color, name, value, error, onChange, onBlur, type, isDisabled, width, fontWeight, errorColor, } = props;
   
   const isPassword = type === 'password'; 
-
+  
   const [showPassword, setShowPassword] = useState(false); 
 
   const togglePasswordVisibility = () => {
@@ -16,7 +16,7 @@ const Input = (props: InputProps) => {
   };
 
   return (
-    <Flex direction="column" p='5px' gap="4px" w={width} overflow='hidden'>
+    <Flex direction="column" gap="4px" w={width} overflow='hidden' p='10px'>
       <Text
         as="label"
         htmlFor={name}
@@ -35,19 +35,11 @@ const Input = (props: InputProps) => {
           color={'black.100'}
           onBlur={onBlur}
           bgColor="grey.100"
-          fontSize={fontSize}
           borderRadius="10px"
           h="50px"
           border={error ? "1px solid #f00" : "none"}
           type={isPassword ? (showPassword ? "text" : "password") : type} 
           disabled={isDisabled}
-          shadow={shadow}
-          outline="none"
-          _focus={
-            {
-              outlineColor : "purple.100", boxShadow: "none",
-            }
-          }
         />
         {isPassword && ( 
           <InputRightElement  border='0' mt='5px'>
@@ -57,7 +49,7 @@ const Input = (props: InputProps) => {
               onClick={togglePasswordVisibility}
               variant="ghost"
               color="gray.500"
-              border='0'
+              border='0px'
               _hover={
                { border: '0px',}
               }

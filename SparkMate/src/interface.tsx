@@ -7,7 +7,8 @@ export interface DefaultbuttonProps extends CBProps {
     color: string;
     shadow?: string;
     children: string;
-    onClick: React.MouseEventHandler<HTMLButtonElement> | (() => void) | undefined;
+    // onClick: React.MouseEventHandler<HTMLButtonElement> | (() => void) | undefined;
+    onClick?: () => void;
     borderWidth?: string | number;
     borderColor?: string;
     fontSize?: string [];
@@ -21,7 +22,7 @@ export interface InputProps {
     value: string;
     color: string | undefined;
     type?: string;
-    error: string | undefined;
+    error?: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur: (e: React.SyntheticEvent) => void;
     isDisabled?: boolean;
@@ -33,6 +34,7 @@ export interface InputProps {
     borderWidth?: string | number;
     borderColor?: string;
     shadow?: string;
+    touched?: boolean;
 }
 
 export interface HeroButtonProps extends CBProps {
@@ -41,4 +43,11 @@ export interface HeroButtonProps extends CBProps {
     borderColor?: string;
     mt?: string[];
     boxShadow?: string;
+  }
+
+
+  export interface signupValues {
+    email: string;
+    password: string;
+    confirmPassword: string;
   }
