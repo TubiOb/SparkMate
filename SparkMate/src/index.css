@@ -24,3 +24,54 @@ body {
     background: linear-gradient(to bottom, white, #D5A9FF);
 }
 
+
+.slide-in-left {
+    animation: slideLeft 1s ease forwards;
+  }
+  
+
+  .slide-in-right {
+    animation: slideRight 1s ease forwards;
+  }
+  
+  .slide-in-top {
+    animation: slideTop 2s ease forwards;
+    -webkit-animation: slideTop 2s ease forwards;
+}
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+      -webkit-transform: translateY(-100%);
+      -moz-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+}
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
