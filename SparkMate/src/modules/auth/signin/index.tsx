@@ -32,10 +32,13 @@ const SignIn = () => {
 
 
 
-  const initialValues = {
-    email: '',
-    password: '',
-  };
+  // const initialValues = {
+  //   email: '',
+  //   password: '',
+  // };
+
+  const [initialValues, setInitialValues] = useState({ email: '', password: '' });
+
 
 
 
@@ -87,10 +90,10 @@ const SignIn = () => {
           variant: 'top-accent',
         });
 
-        // intialValues({
-        //   email: '',
-        //   password: '',
-        // });
+        setInitialValues({
+          email: '',
+          password: '',
+        });
 
         setIsPending(false);
         setSubmitting(false);
@@ -119,7 +122,7 @@ const SignIn = () => {
         <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={signInValidation}>
           {({ values, handleBlur, handleChange, errors, touched}) => (
               <Form>
-                <Flex direction="column" gap={["15px", "33px"]}>
+                <Flex direction="column" gap={["15px", "33px"]} textAlign='left'>
                   <Input
                     color='blue.100'
                     label="Enter Email"
@@ -145,8 +148,12 @@ const SignIn = () => {
                     touched={touched.password}
                     shadow="sm"
                   />
-    
-                  <Text as='p' textAlign='right' mb='15px' mr='5px' cursor='pointer' textDecoration='underline' fontSize={['12px', '15px']}>Forgot password?</Text>
+
+
+                  <ChakraLink as={ReactRouterLink} to="/auth/forgot-password" _hover={{textDecoration: "none"}}>
+                    <Text as='p' textAlign='right' mb='15px' mr='5px' cursor='pointer' _hover={{textDecoration: "underline"}} fontSize={['12px', '15px']}>Forgot password?</Text>
+                  </ChakraLink>
+                  
                 </Flex>
 
                 {loginError && (
@@ -170,7 +177,7 @@ const SignIn = () => {
 
         <Box mt='80px' fontSize={['14px']}>
           <ChakraLink as={ReactRouterLink} to="/auth/signup" _hover={{textDecoration: "none"}}>
-            <Text>Don't have an account? <Text as='span'_hover={{textDecoration: "underline"}} fontWeight='700'>Sign Up</Text></Text>
+            <Text>Don't have an account? <Text as='span' _hover={{textDecoration: "underline"}} fontWeight='700'>Sign Up</Text></Text>
           </ChakraLink>
         </Box>
         
