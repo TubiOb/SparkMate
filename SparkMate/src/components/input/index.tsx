@@ -5,7 +5,7 @@ import { InputProps } from "../../interface";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 
 const Input = (props: InputProps) => {
-  const { label, color, name, value, error, onChange, onBlur, type, isDisabled, width, fontWeight, errorColor, } = props;
+  const { label, color, name, value, error, onChange, onBlur,onFocus, type, isDisabled, width, fontWeight, errorColor, } = props;
   
   const isPassword = type === 'password'; 
   
@@ -32,6 +32,7 @@ const Input = (props: InputProps) => {
           name={name}
           value={value}
           onChange={onChange}
+          onFocus={onFocus}
           color={'black.100'}
           onBlur={onBlur}
           bgColor="grey.100"
