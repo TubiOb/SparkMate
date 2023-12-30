@@ -25,7 +25,7 @@ const SignUp = () => {
 
 
   const [isPending,setIsPending] = useState(false);
-  const [loginError] = useState(false);
+  const [signupError] = useState(false);
   const toast = useToast();
   const auth = getAuth(app);
   const navigate = useNavigate(); 
@@ -167,7 +167,7 @@ const SignUp = () => {
                  
               </Flex>
 
-              {loginError && (
+              {signupError && (
                   <Box color="red" px='3px' fontSize={['11px', '12px']}>Invalid credentials. Please try again.</Box>
                 )}
 

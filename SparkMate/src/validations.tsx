@@ -3,7 +3,7 @@ import * as Yup from "yup";
 
 
 export const signInValidation = Yup.object().shape({
-  emailUsername: Yup.string().required('Email/Username is required'),
+  email: Yup.string().email('invalid email').required("Required"),
   password: Yup.string()
     .required('Password is required')
     .min(8, 'Password must be at least 8 characters')
@@ -32,5 +32,4 @@ export const signUpValidation = Yup.object().shape({
 
 export const forgetPasswordValidation = Yup.object().shape({
   email: Yup.string().required('Email is required'),
- 
 });
