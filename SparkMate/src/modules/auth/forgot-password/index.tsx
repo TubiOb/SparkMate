@@ -4,15 +4,13 @@ import { useNavigate, Link as ReactRouterLink } from 'react-router-dom';
 import { Defaultbutton, Input } from '../../../components';
 import { useState } from 'react';
 
-import {  useToast } from '@chakra-ui/react';
+import {  useToast, Link as ChakraLink, } from '@chakra-ui/react';
 
 import {
     getAuth,
     sendPasswordResetEmail,
   } from 'firebase/auth';
-  import { app } from '../../../firebase';
-  import { doc, getDoc } from 'firebase/firestore';
-  import { firestore } from '../../../firebase';
+import { app } from '../../../firebase';
 import { forgotPasswordValues } from '../../../interface';
 import { forgetPasswordValidation } from '../../../validations';
 
@@ -113,6 +111,12 @@ const ForgotPassword = () => {
                 )}
                 
             </Formik>
+
+            <Box mt='80px' fontSize={['16px']}>
+                <ChakraLink as={ReactRouterLink} to="/auth/signin" _hover={{textDecoration: "none"}}>
+                    <Text>Back to <Text as='span' _hover={{textDecoration: "underline"}} fontWeight='500'>Login</Text></Text>
+                </ChakraLink>
+            </Box>
         </Box>
 
     </Box>
