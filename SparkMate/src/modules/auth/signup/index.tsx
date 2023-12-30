@@ -337,7 +337,7 @@ const getUserLocation = (fieldName: string, setFieldValue: SetFieldValueFunction
         </Formik>
         </Box>
      <Box mt='50px' mb='20px' fontSize={['14px']}>   <ChakraLink as={ReactRouterLink} to="/auth/signin" _hover={{textDecoration: "none"}}>
-        <Text>Already have an acount? <Text as='span'_hover={{textDecoration: "underline"}} fontWeight='700'>Log  In </Text></Text>
+        <Text>Already have an account? <Text as='span'_hover={{textDecoration: "underline"}} fontWeight='700'>Log  In </Text></Text>
                     </ChakraLink></Box>
        
       </Box>
