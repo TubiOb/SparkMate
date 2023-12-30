@@ -60,16 +60,6 @@ const onSubmit = async (values: signupValues, { setSubmitting, setFieldValue }: 
   try {
     const { email, password ,location, age,fullname,username,gender,hobbies} = values;
 
-    // fullname: '',
-    // username: '',
-    // gender: '',
-    // email: '',
-    // password: '',
-    // confirmPassword: '',
-    // hobbies: '',
-    // age: '', 
-    // location: '',
-
     // Create user with email and password
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const userId = userCredential.user.uid;
