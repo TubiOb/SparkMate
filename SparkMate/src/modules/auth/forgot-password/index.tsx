@@ -72,12 +72,12 @@ const ForgotPassword = () => {
 
   return (
     <Box display="flex" flexDir="column" alignContent="center" overflow='hidden' textAlign='center' justifyContent="center" minH="100vh" w="100%">
-        <Box w={['90%', '90%', '80%', '40%']} m="auto" gap="40px" shadow='lg' backdropBlur='base' py='40px'>
-            <Box display='flex' flexDir='column' alignContent="center" justifyContent="center" mb='40px' textAlign='center' gap={['10px', '5px']}>
+        <Box w={['90%', '90%', '80%', '40%']} m="auto" gap="40px" py='40px'>
+            <Box display='flex' flexDir='column' alignContent="center" justifyContent="center" my='30px' textAlign='center' gap={['10px', '5px']}>
                 <Text as="h1" className='subheading' color='purple.400' flexWrap='wrap' fontSize={['25px', '30px']} textAlign="center" fontWeight='700'>
                     Forgot your password?  
                 </Text>
-                <Text as="p" className='subheading' fontSize={['15px', '18px']} textAlign="center" fontWeight='400'>
+                <Text as="span" className='subheading' fontSize={['15px', '18px']} textAlign="center" fontWeight='400'>
                     Your password will be reset by email.
                 </Text>
             </Box>
@@ -104,7 +104,7 @@ const ForgotPassword = () => {
                             <Box color="red" px='3px' fontSize={['11px', '12px']}>Invalid credentials. Please try again.</Box>
                         )}
 
-                        <Defaultbutton type='submit' bg='linear-gradient(to right, #674CCD, #D5A9FF)' width={['70%', '70%', '70%', '70%']} color="black" shadow="base" mx='auto' fontSize={['15px', '20px']} 
+                        <Defaultbutton type='submit' bg='linear-gradient(to right, #674CCD, #D5A9FF)' width={['70%', '70%', '70%', '70%']} color="white" shadow="base" mx='auto' fontSize={['15px', '20px']} 
                             isLoading={isPending} loadingText="Loading...">{'Login'}
                         </Defaultbutton>
                 </Form>

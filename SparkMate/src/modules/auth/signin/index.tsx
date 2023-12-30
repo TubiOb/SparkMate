@@ -109,7 +109,7 @@ const SignIn = () => {
       <Image src={LoveImg} w={['100px', '130px' , '150px']} bottom='0' right='0'  className='slide-in-right' position='absolute'/>
 
       <Box w={['90%', '90%', '80%', '40%']} m="auto" className='slide-in-top' gap="40px">
-        <Box display='flex' flexDir={['column', 'row']} alignContent="center" justifyContent="center" textAlign='center' gap={['10px', '5px']}>
+        <Box display='flex' flexDir={['column', 'row']} alignContent="center" justifyContent="center" my='30px' textAlign='center' gap={['10px', '5px']}>
           <Text as="h1" className='subheading' flexWrap='wrap' fontSize={['25px', '30px']} textAlign="center" fontWeight='700'>
             Welcome,  
           </Text>
@@ -175,7 +175,7 @@ const SignIn = () => {
         
 
 
-        <Box mt='80px' fontSize={['14px']}>
+        <Box mt='80px' fontSize={['10px', '14px']}>
           <ChakraLink as={ReactRouterLink} to="/auth/signup" _hover={{textDecoration: "none"}}>
             <Text>Don't have an account? <Text as='span' _hover={{textDecoration: "underline"}} fontWeight='700'>Sign Up</Text></Text>
           </ChakraLink>
