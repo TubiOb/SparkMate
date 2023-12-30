@@ -20,7 +20,7 @@ import {
 import { app } from '../../../firebase';
 import { doc, setDoc } from 'firebase/firestore';
 import { firestore } from '../../../firebase';
-
+import React from 'react';
 
 const SignUp = () => {
 
@@ -30,7 +30,7 @@ const SignUp = () => {
   const auth = getAuth(app);
   const navigate = useNavigate(); 
  
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [radiovalue, setradiovalue] = React.useState('male')
   type SetFieldValueFunction = (field: string, value: any, shouldValidate?: boolean) => void;
 
 
@@ -168,7 +168,7 @@ const getUserLocation = (fieldName: string, setFieldValue: SetFieldValueFunction
 <Image src={LoveImg} w={['100px', '130px' , '150px']} 
     bottom='0' right='0'  className='slide-in-right '
     position='absolute'/>
-      <Box w={['90%', '90%', '80%', '40%']} mx="auto" className='slide-in-top' position='relative'>
+      <Box w={['90%', '90%', '80%', '40%']} mx="auto" className='slide-in-top'>
         <Box
           display="flex"
           flexDir={['column','column', 'row']}
@@ -186,7 +186,6 @@ const getUserLocation = (fieldName: string, setFieldValue: SetFieldValueFunction
             to get started now!
           </Text>
         </Box>
-        <Box maxHeight="70vh" overflowY="scroll" className="custom-scrollbar"> 
         <Formik
           initialValues={initialValues}
           onSubmit={onSubmit}
@@ -223,16 +222,13 @@ const getUserLocation = (fieldName: string, setFieldValue: SetFieldValueFunction
                     shadow="sm"
                 />
 
-<RadioGroup onChange={(value) => setFieldValue('gender', value)} value={values.gender}>
-  <Stack direction='row'>
-    <Radio colorScheme='purple' value='male'>Male</Radio>
-    <Radio colorScheme='purple' value='female'>Female</Radio>
-    <Radio colorScheme='purple' value='other'>Other</Radio>
-  </Stack>
-</RadioGroup>
-
-
-
+<RadioGroup onChange={setradiovalue} value={radiovalue}>
+      <Stack direction='row'>
+        <Radio colorScheme='purple' value='male'>Male</Radio>
+        <Radio colorScheme='purple' value='female'>Female</Radio>
+        <Radio colorScheme='purple' value='other'>Other</Radio>
+      </Stack>
+    </RadioGroup>
                 
                 <Input
                   error={errors.email}
@@ -325,7 +321,6 @@ const getUserLocation = (fieldName: string, setFieldValue: SetFieldValueFunction
 
             
 
-<Box mb='40px'>
 <Defaultbutton
   type="submit"
   bg="white"
@@ -340,13 +335,11 @@ const getUserLocation = (fieldName: string, setFieldValue: SetFieldValueFunction
 >
   {'Sign Up'}
 </Defaultbutton>
-</Box>
 
             </Form>
           )}
         </Formik>
-        </Box>
-     <Box mt='50px' mb='20px' fontSize={['14px']}>   <ChakraLink as={ReactRouterLink} to="/auth/signin" _hover={{textDecoration: "none"}}>
+     <Box mt='80px' fontSize={['14px']}>   <ChakraLink as={ReactRouterLink} to="/auth/signin" _hover={{textDecoration: "none"}}>
         <Text>Already have an acount? <Text as='span'_hover={{textDecoration: "underline"}} fontWeight='700'>Log  In </Text></Text>
                     </ChakraLink></Box>
        

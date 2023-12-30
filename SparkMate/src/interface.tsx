@@ -25,6 +25,7 @@ export interface InputProps {
     error?: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur: (e: React.SyntheticEvent) => void;
+    onFocus?: () => void;
     isDisabled?: boolean;
     width?: string[];
     fontWeight?: string;
@@ -47,7 +48,13 @@ export interface HeroButtonProps extends CBProps {
 
 
   export interface signupValues {
+    fullname: string;
+    username: string;
+    gender: string;
     email: string;
     password: string;
     confirmPassword: string;
+    hobbies: string;
+    age: string;
+    location: string;
   }

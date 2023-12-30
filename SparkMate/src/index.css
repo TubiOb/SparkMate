@@ -75,3 +75,31 @@ body {
     }
   }
   
+
+
+  /* YourComponent.css */
+.custom-scrollbar {
+  
+  scrollbar-width: thin; 
+  scrollbar-color: #8f1aa6 transparent;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ad34c6;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
