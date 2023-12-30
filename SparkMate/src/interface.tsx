@@ -56,3 +56,7 @@ export interface HeroButtonProps extends CBProps {
     email: string;
     password: string;
   }
+
+  export interface forgotPasswordValues {
+    email: string;
+  }

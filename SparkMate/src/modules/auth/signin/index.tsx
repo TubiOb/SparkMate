@@ -32,10 +32,13 @@ const SignIn = () => {
 
 
 
-  const initialValues = {
-    email: '',
-    password: '',
-  };
+  // const initialValues = {
+  //   email: '',
+  //   password: '',
+  // };
+
+  const [initialValues, setInitialValues] = useState({ email: '', password: '' });
+
 
 
 
@@ -87,10 +90,10 @@ const SignIn = () => {
           variant: 'top-accent',
         });
 
-        // intialValues({
-        //   email: '',
-        //   password: '',
-        // });
+        setInitialValues({
+          email: '',
+          password: '',
+        });
 
         setIsPending(false);
         setSubmitting(false);
@@ -147,7 +150,7 @@ const SignIn = () => {
                   />
 
 
-                  <ChakraLink as={ReactRouterLink} to="/auth/forgotpassword" _hover={{textDecoration: "none"}}>
+                  <ChakraLink as={ReactRouterLink} to="/auth/forgot-password" _hover={{textDecoration: "none"}}>
                     <Text as='p' textAlign='right' mb='15px' mr='5px' cursor='pointer' _hover={{textDecoration: "underline"}} fontSize={['12px', '15px']}>Forgot password?</Text>
                   </ChakraLink>
                   

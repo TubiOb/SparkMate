@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { SignIn, SignUp } from "./modules";
+import { SignIn, SignUp, ForgotPassword } from "./modules";
 import { HomePage } from "./pages";
 
 const Router = createBrowserRouter([
@@ -15,10 +15,10 @@ const Router = createBrowserRouter([
         path: "signin",
         element: <SignIn />,
       }, 
-      // {
-      //   path: "forgot-password",
-      //   element: <ForgotPassword />,
-      // },
+      {
+        path: "forgot-password",
+        element: <ForgotPassword />,
+      },
     
      
     ],
