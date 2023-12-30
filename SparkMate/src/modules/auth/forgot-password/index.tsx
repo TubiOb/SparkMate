@@ -104,7 +104,7 @@ const ForgotPassword = () => {
                             <Box color="red" px='3px' fontSize={['11px', '12px']}>Invalid credentials. Please try again.</Box>
                         )}
 
-                        <Defaultbutton type='submit' bg='linear-gradient(to right, #674CCD, #D5A9FF)' width={['70%', '70%', '70%', '70%']} color="white" shadow="base" mx='auto' fontSize={['15px', '20px']} 
+                        <Defaultbutton type='submit' bg='linear-gradient(to right, #674CCD, #D5A9FF)' width={['70%', '70%', '70%', '70%']} color="white" shadow="base" mx='auto' fontSize={['14px', '15px', '16px']} 
                             isLoading={isPending} loadingText="Loading...">{'Login'}
                         </Defaultbutton>
                 </Form>
@@ -112,7 +112,7 @@ const ForgotPassword = () => {
                 
             </Formik>
 
-            <Box mt='80px' fontSize={['16px']}>
+            <Box mt='80px' fontSize={['14px']}>
                 <ChakraLink as={ReactRouterLink} to="/auth/signin" _hover={{textDecoration: "none"}}>
                     <Text>Back to <Text as='span' _hover={{textDecoration: "underline"}} fontWeight='500'>Login</Text></Text>
                 </ChakraLink>

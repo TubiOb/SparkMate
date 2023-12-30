@@ -160,7 +160,7 @@ const SignIn = () => {
                   <Box color="red" px='3px' fontSize={['11px', '12px']}>Invalid credentials. Please try again.</Box>
                 )}
 
-                <Defaultbutton type='submit' bg="white" width={['80%', '80%', '80%', '80%']} color="black" shadow="base" mx='auto' fontSize={['15px', '20px']} 
+                <Defaultbutton type='submit' bg="white" width={['80%', '80%', '80%', '80%']} color="black" shadow="base" mx='auto' fontSize={['14px', '15px', '16px']} 
                   isLoading={isPending} loadingText="Loading...">{'Login'}
                 </Defaultbutton>
               </Form>
