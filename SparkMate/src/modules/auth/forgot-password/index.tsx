@@ -105,7 +105,7 @@ const ForgotPassword = () => {
                         )}
 
                         <Defaultbutton type='submit' bg='linear-gradient(to right, #674CCD, #D5A9FF)' width={['70%', '70%', '70%', '70%']} color="white" shadow="base" mx='auto' fontSize={['14px', '15px', '16px']} 
-                            isLoading={isPending} loadingText="Loading...">{'Login'}
+                            isLoading={isPending} loadingText="Loading...">{'Submit'}
                         </Defaultbutton>
                 </Form>
                 )}

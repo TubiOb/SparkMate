@@ -17,8 +17,9 @@ export interface DefaultbuttonProps extends CBProps {
 
 
 export interface InputProps {
-    label: string
+    label?: string
     name: string;
+    placeholder?: string;
     value: string;
     color: string | undefined;
     type?: string;
@@ -36,6 +37,7 @@ export interface InputProps {
     borderColor?: string;
     shadow?: string;
     touched?: boolean;
+
 }
 
 export interface HeroButtonProps extends CBProps {
@@ -66,4 +68,11 @@ export interface HeroButtonProps extends CBProps {
 
   export interface forgotPasswordValues {
     email: string;
+  }
+
+  export interface navBarProps {
+    inputField?: React.ReactNode;
+    avatarImage?: string;
+    username?: string;
+    menuIcon?: React.ReactNode;
   }

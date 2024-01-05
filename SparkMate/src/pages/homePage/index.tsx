@@ -11,9 +11,9 @@ const HomePage = () => {
     navigate(`/auth/${route}`);
   };
 
-  const gradientStyle = {
-    background: 'linear-gradient(to bottom, white, #D5A9FF)',
-  };
+  // const gradientStyle = {
+  //   background: 'linear-gradient(to bottom, white, #D5A9FF)',
+  // };
 
   return (
     <Box bg='white' display="flex" flexDir="column" alignContent="center" justifyContent="center" minH="100vh" w="100%">

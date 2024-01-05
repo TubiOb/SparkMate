@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { SignIn, SignUp, ForgotPassword } from "./modules";
 import { HomePage } from "./pages";
+import { Navbar } from "./components";
 
 const Router = createBrowserRouter([
 
@@ -24,10 +25,23 @@ const Router = createBrowserRouter([
     ],
   },
 
+
   {
     path: "/",
     element: <HomePage />,
   },
+
+  
+  // {
+  //   path: 'components',
+  //   children: [
+      {
+        path: "navbar",
+        element: <Navbar />,
+      }
+  //   ]
+    
+  // },
 
 
 
