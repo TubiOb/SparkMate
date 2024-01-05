@@ -1,11 +1,12 @@
 
 import { useState } from "react";
-import { Flex, Input as ChakraInput, Text, IconButton, InputGroup, InputRightElement,  } from "@chakra-ui/react";
+import { Flex, Input as ChakraInput, Text, IconButton, InputGroup, InputRightElement, InputLeftElement,  } from "@chakra-ui/react";
 import { InputProps } from "../../interface";
-import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
 
 const Input = (props: InputProps) => {
-  const { label, color, name, value, error, onChange, onBlur,onFocus, type, isDisabled, width, fontWeight, errorColor, } = props;
+  const { label, color, name, value, error, onChange, onBlur, onFocus, type, isDisabled, width, fontWeight, errorColor, placeholder} = props;
   
   const isPassword = type === 'password'; 
   
@@ -41,6 +42,7 @@ const Input = (props: InputProps) => {
           border={error ? "1px solid #f00" : "none"}
           type={isPassword ? (showPassword ? "text" : "password") : type} 
           disabled={isDisabled}
+          placeholder={placeholder}
         />
         {isPassword && ( 
           <InputRightElement  border='0' mt='5px'>
@@ -60,6 +62,26 @@ const Input = (props: InputProps) => {
               
             />
           </InputRightElement>
+        )}
+
+        {type === 'search' && ( 
+          <InputLeftElement  border='0' mt='5px'>
+            <IconButton
+              aria-label='Search'
+              icon={<CiSearch />} 
+              // onClick={}
+              variant="ghost"
+              color="gray.500"
+              border='0px'
+              _hover={
+               { border: '0px',}
+              }
+              _active={
+                { border: '0px',}
+               }
+              
+            />
+          </InputLeftElement>
         )}
       </InputGroup>
       {error && (
